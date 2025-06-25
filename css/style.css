@@ -1,0 +1,336 @@
+/* reset */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+p,
+a,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+label,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Apple SD Gothic Neo";
+  font-weight: 400;
+  vertical-align: baseline;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #444;
+}
+label.checkbox {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  margin: -1px;
+  clip-path: inset(50%);
+}
+ol,
+ul {
+  list-style: none;
+}
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+input[type="button" i] {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  background: none;
+}
+button:focus,
+input:focus {
+  outline: none;
+  border: 0;
+}
+.no-f {
+  display: none;
+  font-size: 0;
+  text-indent: -9999em;
+}
+
+.top-continer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.logo-box {
+  height: 60px;
+  background: #4287f5;
+}
+.logo-box p {
+  font-family: "OpenSans";
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+.top-continer > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.date-box {
+  position: relative;
+  height: 80px;
+}
+.date-box p {
+  font-weight: 600;
+  font-size: 24px;
+}
+.date-box .txt span {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+}
+.calendar-btn {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+}
+.calendar-btn i {
+  font-size: 30px;
+  color: #444;
+}
+.main-container {
+  margin-top: 140px;
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 140px);
+}
+.inner-item {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+.no-result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.no-result i {
+  font-size: 90px;
+  font-weight: 400;
+  color: #4287f5;
+}
+.no-result span {
+  display: block;
+  padding-top: 10px;
+  font-size: 18px;
+  letter-spacing: -0.4px;
+}
+.add-btn i {
+  font-size: 65px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #4287f5;
+}
+
+/* 일정 추가 팝업 */
+.list-add-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.list-add-popup .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 50px;
+  padding: 0 10px;
+  background: #4287f5;
+}
+.list-add-popup .date-txt {
+  font-size: 20px;
+  color: #fff;
+}
+.list-add-popup .close-btn {
+}
+.save-btn {
+  font-size: 32px;
+  color: #fff;
+}
+/* .remove-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.09);
+  border-radius: 100%;
+  background: #fff;
+}
+.remove-btn i {
+  font-size: 30px;
+} */
+
+.list-add-popup .close-btn i {
+  font-size: 32px;
+  color: #fff;
+}
+.list-add-popup .item {
+  padding: 30px 40px 40px;
+}
+.list-add-popup input {
+  width: 100%;
+  height: 55px;
+  padding: 0 15px;
+  border-bottom: 1px solid #dedede;
+}
+.list-add-popup label {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+.list-add-popup .todo-label input {
+  font-size: 18px;
+}
+.list-add-popup .description-label {
+  margin-top: 10px;
+}
+
+.list-add-popup textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #dedede;
+  font-size: 15px;
+  height: 300px;
+  color: #444;
+}
+.my_list_box {
+  overflow-y: auto;
+  height: calc(100% - 140px);
+  padding-right: 20px;
+}
+.my_list {
+  max-width: 960px;
+  margin: auto;
+}
+.my_list li {
+  display: flex;
+  border-radius: 9px;
+  padding: 15px 15px;
+  background: #f2f4f5;
+}
+.my_list li.on {
+  border: 2px solid #4287f5;
+  background: rgba(242, 244, 245, 0.4);
+}
+.my_list li + li {
+  margin-top: 20px;
+}
+.my_list input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.my_list .text-box {
+  width: 100%;
+  padding-right: 5px;
+  margin-top: 3px;
+  padding-left: 8px;
+  line-height: 1;
+  cursor: pointer;
+}
+.my_list .chkbox {
+  display: inline-block;
+  position: relative;
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  border-radius: 4px;
+  border: 2px solid #dedede;
+}
+.my_list .chk-item {
+  position: relative;
+}
+.my_list .chk-item i {
+  color: #dedede;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: -4px;
+  margin-top: 7px;
+  font-size: 18px;
+}
+.my_list li.on .chkbox {
+  border: 1px solid #4287f5;
+  background: #4287f5;
+}
+.my_list li.on .chkbox::after {
+  content: "";
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.my_list li.on .chk-item i {
+  color: #fff;
+}
+.my_list .text-box span {
+  display: block;
+}
+.my_list .text-box .text1 {
+  font-weight: 500;
+  font-size: 18px;
+}
+.my_list .text-box .text2 {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #666;
+}
+
+.remove-btn i {
+  font-size: 22px;
+  color: #aaa;
+}
+@media only screen and (max-width: 760px) {
+  .date-box p {
+    font-size: 20px;
+  }
+  .inner-item {
+    padding-left: 20px;
+  }
+  .list-add-popup .item {
+    padding: 20px;
+  }
+}

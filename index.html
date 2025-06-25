@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이투두</title>
+    <script src="./js/todo.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo.css"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="box">
+      <div class="top-continer">
+        <div class="logo-box">
+          <p>My ToDo</p>
+        </div>
+        <div class="date-box">
+          <div>
+            <p class="txt"><span></span></p>
+          </div>
+          <!-- <button type="button" class="calendar-btn" id="calendar-btn">
+            <span class="no-f">달력</span>
+            <i class="ri-calendar-line"></i>
+          </button> -->
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="inner-item">
+          <p class="no-result">
+            <i class="ri-calendar-close-line"></i>
+            <span>일정이 없어요</span>
+          </p>
+          <button type="button" class="add-btn" id="add-btn">
+            <span class="no-f">추가</span>
+            <i class="ri-add-circle-fill"></i>
+          </button>
+          <!-- 일정 추가 팝업 -->
+          <div class="list-add-popup" id="list-add-popup" style="display: none">
+            <div class="top">
+              <button type="button" class="close close-btn" id="close-btn">
+                <span class="no-f">닫기</span>
+                <i class="ri-close-line"></i>
+              </button>
+              <p class="date-txt" id="date-txt">오늘</p>
+              <button type="button" class="save-btn" id="save-btn">
+                <span class="no-f">확인</span>
+                <i class="ri-check-line"></i>
+              </button>
+            </div>
+            <div class="item">
+              <label for="date" class="date-label">
+                <input type="button" title="날짜" value="" id="date" />
+              </label>
+              <label for="todo" class="todo-label">
+                <input
+                  type="text"
+                  title="무엇을 하고 싶으신가요?"
+                  placeholder="무엇을 하고 싶으신가요?"
+                  id="title"
+                />
+              </label>
+              <label for="description" class="description-label">
+                <textarea
+                  title="설명"
+                  placeholder="설명"
+                  id="description"
+                ></textarea>
+              </label>
+            </div>
+            <!-- <button type="button" class="close remove-btn" id="remove-btn">
+              <span class="no-f">삭제</span>
+              <i class="ri-delete-bin-line"></i>
+            </button> -->
+          </div>
+          <!-- 일정 추가 팝업 끝 -->
+          <div class="my_list_box">
+            <ul class="my_list">
+              <li id="template" style="display: none">
+                <label for="chk-input">
+                  <p class="chk-item">
+                    <input type="checkbox" name="chk-input" id="chk-input" />
+                    <span class="no-f chkbox">체크박스</span>
+                    <i class="ri-check-fill"></i>
+                  </p>
+                </label>
+                <div class="text-box">
+                  <span class="text1"></span>
+                  <span class="text2"></span>
+                </div>
+                <button type="button" class="remove-btn" id="remove-btn">
+                  <span class="no-f">삭제</span>
+                  <i class="ri-delete-bin-line"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
