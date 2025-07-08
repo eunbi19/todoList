@@ -49,8 +49,23 @@ function Listitem(title, content, id) {
   const clone = template.cloneNode(true);
   clone.removeAttribute("id");
   clone.style.display = "flex";
-  clone.querySelector(".text1").textContent = title;
-  clone.querySelector(".text2").textContent = content;
+
+  // clone.querySelector(".text1").textContent = title;
+  // clone.querySelector(".text2").textContent = content;
+
+  const textBox = clone.querySelector(".text-box");
+  if (title) {
+    const text1 = document.createElement("span");
+    text1.classList.add("text1");
+    text1.textContent = title;
+    textBox.appendChild(text1);
+  }
+  if (content) {
+    const text2 = document.createElement("span");
+    text2.classList.add("text2");
+    text2.textContent = content;
+    textBox.appendChild(text2);
+  }
 
   const checkbox = clone.querySelector('input[type="checkbox"]');
   const label = clone.querySelector("label");

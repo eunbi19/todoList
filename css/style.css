@@ -179,26 +179,10 @@ input:focus {
   font-size: 20px;
   color: #fff;
 }
-.list-add-popup .close-btn {
-}
 .save-btn {
   font-size: 32px;
   color: #fff;
 }
-/* .remove-btn {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 60px;
-  box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.09);
-  border-radius: 100%;
-  background: #fff;
-}
-.remove-btn i {
-  font-size: 30px;
-} */
 
 .list-add-popup .close-btn i {
   font-size: 32px;
@@ -244,6 +228,7 @@ input:focus {
 }
 .my_list li {
   display: flex;
+  align-items: center;
   border-radius: 9px;
   padding: 15px 15px;
   background: #f2f4f5;
@@ -267,6 +252,7 @@ input:focus {
   padding-left: 8px;
   line-height: 1;
   cursor: pointer;
+  word-break: keep-all;
 }
 .my_list .chkbox {
   display: inline-block;
@@ -286,8 +272,6 @@ input:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-left: -4px;
-  margin-top: 7px;
   font-size: 18px;
 }
 .my_list li.on .chkbox {
@@ -312,10 +296,12 @@ input:focus {
 .my_list .text-box .text1 {
   font-weight: 500;
   font-size: 18px;
+  line-height: 1.2;
 }
 .my_list .text-box .text2 {
   margin-top: 8px;
   font-size: 15px;
+  line-height: 1.2;
   color: #666;
 }
 
@@ -324,6 +310,7 @@ input:focus {
   color: #aaa;
 }
 @media only screen and (max-width: 760px) {
+  /* 모바일 */
   .date-box p {
     font-size: 20px;
   }
